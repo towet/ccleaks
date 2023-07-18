@@ -678,7 +678,7 @@
       var price = $(this).closest('.portfolio-caption').find('.amount').text().trim();
       
       var balance = parseFloat(balance.replace('$', ''));
-    var price = 5;
+    var price = 50;
 
 if (balance < 0) {
   alert('Insufficient balance. Please top up your balance.');
@@ -689,43 +689,41 @@ if (balance < 0) {
 }
     });
     });
-    
     function buyProduct(price) {
-    // Make the payment request to Coinbase Commerce API
-    $.ajax({
-      url: 'https://api.commerce.coinbase.com/charges',
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CC-Api-Key': '47a817cf-b333-49b9-b187-4255fc4d49fa',
-        'X-CC-Version': '2018-03-22'
-      },
-      data: JSON.stringify({
-        name: 'Product Name',
-        description: 'Product Description',
-        local_price: {
-          amount: price,
-          currency: 'USD'
-        },
-        pricing_type: 'fixed_price',
-        redirect_url: 'https://null-byte.wonderhowto.com/',
-        cancel_url: 'https://example.com/cancel'
-      }),
-      success: function(response) {
-        // Redirect the user to the payment page
-        window.location.href = response.hosted_url;
-      },
-      error: function(error) {
-        console.log(error);
-        alert('Payment failed. Please try again later.');
-      }
-    });
-    }
-    </script>
+// Make the payment request to Coinbase Commerce API
+$.ajax({
+  url: 'https://api.commerce.coinbase.com/charges',
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'X-CC-Api-Key': '47a817cf-b333-49b9-b187-4255fc4d49fa',
+    'X-CC-Version': '2018-03-22'
+  },
+  data: JSON.stringify({
+    name: 'Product Name',
+    description: 'Product Description',
+    local_price: {
+      amount: price,
+      currency: 'USD'
+    },
+    pricing_type: 'fixed_price',
+    redirect_url: 'https://null-byte.wonderhowto.com/',
+    cancel_url: 'https://example.com/cancel'
+  }),
+  success: function(response) {
+    // Redirect the user to the payment page
+    window.location.href = response.hosted_url;
+  },
+  error: function(error) {
+    console.log(error);
+    alert('Payment failed. Please try again later.');
+  }
+});
+}
+</script>
     
     
-    
-    
+ 
 
     <!-- footer -->
     <div class="footer segments">
@@ -753,35 +751,3 @@ if (balance < 0) {
 </html>
 
 
-
-Next, update the `buyProduct` function to include the `amount` field in the JSON object you're sending to the Coinbase Commerce API:
-function buyProduct(price) {
-    // Make the payment request to Coinbase Commerce API
-    ﹩.ajax({
-        url: 'https://api.commerce.coinbase.com/charges',
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-CC-Api-Key': '47a817cf-b333-49b9-b187-4255fc4d49fa',
-            'X-CC-Version': '2018-03-22'
-        },
-        data: JSON.stringify({
-            name: 'Product Name',
-            description: 'Product Description',
-            local_price: {
-                amount: price,
-                currency: 'USD'
-            },
-            pricing_type: 'fixed_price',
-            redirect_url: 'https://null-byte.wonderhowto.com/',
-            cancel_url: 'https://example.com/cancel'
-        }),
-        success: function(response) {
-            // Redirect the user to the payment page
-            window.location.href = response.hosted_url;
-        error: function(error) {
-            console.log(error);
-            alert('Payment failed. Please try again later.');
-        }
-    });
-}
