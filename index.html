@@ -327,32 +327,60 @@
                 </div>
                 
 
-                <div class="row no-gutters filtr-container">
-                    <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="3">
-                        <div class="content-image">
-                            <a href="images/portfolio1.jpg" class="portfolio-popup">
-                                <img src="images/us6.jpg" alt="">
-                                <div class="image-overlay"></div>
-                                <div class="portfolio-caption">
-                                    <div class="title">
-                                        <h4>new!</h4>
-                                    </div>
-                                    <div class="subtitle">
-                                        <span>verified</span>
-                                    </div>
-                                    <div class="container-details">
-                                        <div class="description">Dump card: USA</div>
-                                        <div class="price">Balance: $99.99</div>
-                                        <div class="amount">Price: $10</div>
-                                    </div>
-                                    <div class="buy-button">
-                                        <a href="#" class="btn" onclick="buyProduct()">Buy</a>
-                                      </div>
-                                </div>
-                            </a>
+                <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="2, 1">
+                    <div class="content-image">
+                      <a href="images/portfolio3.jpg" class="portfolio-popup">
+                        <img src="images/a3.jpeg" alt="">
+                        <div class="image-overlay"></div>
+                        <div class="portfolio-caption">
+                          <div class="title">
+                            <h4>new!</h4>
+                          </div>
+                          <div class="subtitle">
+                            <span>verified</span>
+                          </div>
+                          <div class="container-details">
+                            <div class="description">Dump card: USA</div>
+                            <div class="price">Balance: $99.99</div>
+                            <div class="amount">Price: $10</div>
+                          </div>
+                          <div class="buy-button">
+                            <a href="#" class="btn" onclick="buyProduct(10)">Buy</a>
+                          </div>
                         </div>
-                         
+                      </a>
                     </div>
+                  </div>
+                  
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                  <script>
+                  function buyProduct(price) {
+                    // Create the charge
+                    $.ajax({
+                      url: 'https://api.commerce.coinbase.com/charges/',
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                        'X-CC-Api-Key': '85126c2c-f3b2-43ff-93c8-d224cd6086f0',
+                        'X-CC-Version': '2018-03-22'
+                      },
+                      data: JSON.stringify({
+                        name: 'Product Name',
+                        description: 'Product Description',
+                        pricing_type: 'no_price'
+                      }),
+                      success: function(response) {
+                        // Redirect the user to the hosted payment page
+                        window.location.href = response.hosted_url;
+                      },
+                      error: function(error) {
+                        console.log(error);
+                        alert('Payment failed. Please try again later.');
+                      }
+                    });
+                  }
+                  </script>
+                  
                     <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="1">
                         <div class="content-image">
                             <a href="images/portfolio2.jpg" class="portfolio-popup">
@@ -667,60 +695,6 @@
     <!-- end contact -->
     
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function() {
-    $('.buy-button a').click(function(e) {
-      e.preventDefault();
-      
-      // Get the necessary details for the payment
-      var balance = $(this).closest('.portfolio-caption').find('.price').text().trim();
-      var price = $(this).closest('.portfolio-caption').find('.amount').text().trim();
-      
-      var balance = parseFloat(balance.replace('$', ''));
-    var price = 50;
-
-if (balance < 0) {
-  alert('Insufficient balance. Please top up your balance.');
-} else if (price <= 0) {
-  alert('Local price must be greater than 0.');
-} else {
-  buyProduct(price);
-}
-    });
-    });
-    function buyProduct(price) {
-// Make the payment request to Coinbase Commerce API
-$.ajax({
-  url: 'https://api.commerce.coinbase.com/charges',
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'X-CC-Api-Key': '47a817cf-b333-49b9-b187-4255fc4d49fa',
-    'X-CC-Version': '2018-03-22'
-  },
-  data: JSON.stringify({
-    name: 'Product Name',
-    description: 'Product Description',
-    local_price: {
-      amount: price,
-      currency: 'USD'
-    },
-    pricing_type: 'fixed_price',
-    redirect_url: 'https://null-byte.wonderhowto.com/',
-    cancel_url: 'https://example.com/cancel'
-  }),
-  success: function(response) {
-    // Redirect the user to the payment page
-    window.location.href = response.hosted_url;
-  },
-  error: function(error) {
-    console.log(error);
-    alert('Payment failed. Please try again later.');
-  }
-});
-}
-</script>
     
     
  
