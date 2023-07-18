@@ -315,7 +315,7 @@
                             <span>See All</span>
                         </li>
                         <li data-filter="1">
-                            <span>USA</span>
+                            <span>USAq</span>
                         </li>
                         <li data-filter="2">
                             <span>Australia</span>
@@ -677,14 +677,16 @@
       var balance = $(this).closest('.portfolio-caption').find('.price').text().trim();
       var price = $(this).closest('.portfolio-caption').find('.amount').text().trim();
       
-      // Integrate option C
       var balance = parseFloat(balance.replace('$', ''));
-      var price = parseFloat(price.replace('$', ''));
-      if (balance < price) {
-        alert('Insufficient balance. Please top up your balance.');
-      } else {
-        buyProduct(price);
-      }
+    var price = 5;
+
+if (balance < 0) {
+  alert('Insufficient balance. Please top up your balance.');
+} else if (price <= 0) {
+  alert('Local price must be greater than 0.');
+} else {
+  buyProduct(price);
+}
     });
     });
     
@@ -749,3 +751,37 @@
 </body>
 
 </html>
+
+
+
+Next, update the `buyProduct` function to include the `amount` field in the JSON object you're sending to the Coinbase Commerce API:
+function buyProduct(price) {
+    // Make the payment request to Coinbase Commerce API
+    ﹩.ajax({
+        url: 'https://api.commerce.coinbase.com/charges',
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CC-Api-Key': '47a817cf-b333-49b9-b187-4255fc4d49fa',
+            'X-CC-Version': '2018-03-22'
+        },
+        data: JSON.stringify({
+            name: 'Product Name',
+            description: 'Product Description',
+            local_price: {
+                amount: price,
+                currency: 'USD'
+            },
+            pricing_type: 'fixed_price',
+            redirect_url: 'https://null-byte.wonderhowto.com/',
+            cancel_url: 'https://example.com/cancel'
+        }),
+        success: function(response) {
+            // Redirect the user to the payment page
+            window.location.href = response.hosted_url;
+        error: function(error) {
+            console.log(error);
+            alert('Payment failed. Please try again later.');
+        }
+    });
+}
