@@ -1,6 +1,6 @@
 body{
 
-	background-color: #eee;
+	background-color: #0f0d0d;
 }
 .container{
 	width: 900px;
@@ -193,7 +193,7 @@ body{
 
 
 .voutchers{
-	background-color: #fff;
+	background-color: #110f0f;
 	border:none;
 	border-radius: 10px;
 	width: 190px;
@@ -222,7 +222,7 @@ body{
 .voutcher-right{
 	width: 40%;	 
 	background-color: purple;
-	color: #fff;
+	color: #dd0a0a;
 }
 
 .discount-percent{

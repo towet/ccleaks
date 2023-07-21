@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+        background-color: #b36f17;
+}
+.card-img-top{
+    border-radius: 50px;
+    padding: 20px;
+}
+.card{
+    border-radius: 30px;
+    box-shadow: rgba(14, 137, 185, 0.1) 0px 1px 2px 0px;
+}
+.card  {
+    padding: 25px;
+    margin-top: -15px;
+    background-color: #0ceedb; /* Add a background color for the card content */
+    color: #333; /* Set the text color for the card content */
+    border-bottom-left-radius: 30px; /* Adjust the border radius for the bottom left corner */
+    border-bottom-right-radius: 30px; /* Adjust the border radius for the bottom right corner */
+    box-shadow: rgba(8, 235, 204, 0.1) 0px 1px 2px 0px; /* Use blue shadow effect */
+}
+
+.btn-primary{
+    border-radius: 50px;
+    width: 120px;
+}
+.btn-primary:hover{
+    background-color: black;
+    border: none;
+}
+h3,h5{
+    color: rgb(0, 91, 228);
+}
+
+    /* Adjust card content */
+    .card .card-body {
+        display: block;
+    }
+
+    .card .card-title {
+        margin-bottom: 10px;
+    }
+
+    .card .card-text {
+        margin-bottom: 20px;
+        color: aqua;
+    }
+

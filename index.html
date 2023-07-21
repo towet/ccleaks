@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet">
     <link rel="icon" href="images/favicon.png">
     <title>Bleak - Personal Portfolio Template</title>
 
@@ -299,9 +305,48 @@
         </div>
     </div>
     <!-- end resume -->
-       <style>
-        
-       </style>
+    <style>
+
+        /* Adjust card content */
+        .card .card-body {
+            background-color: #4A0446, #AA67AE; /* Set the desired background color */
+            color: #333; /* Set the desired text color */
+            display: block;
+            
+        }
+    
+        .card .card-title {
+            margin-bottom: 10px;
+            color: red;
+        }
+    
+        .card .card-text {
+            margin-bottom: 20px;
+        }
+        .card .mb-5 {
+            display: flex; /* Use flexbox for layout */
+        flex-direction: row; /* Arrange elements horizontally */
+        align-items: center; /* Center items vertically */
+        justify-content: space-between;}
+    
+        /* Adjust h3 and balance span */
+        .card .mb-5 h3 {
+            margin-top: 0; /* Remove default top margin for h3 */
+            color: rgb(41, 219, 5);
+        }
+
+    
+        .card .mb-5 span {
+            font-family: 'Modern Font'; /* Set the desired font family */
+            text-align: right;
+            color: blue;
+            font-family: 'Modern Font'; /* Set the desired font family */
+        text-align: right; /* Align the balance to the right **/}
+         
+    
+    </style>
+    
+    
     <!-- portfolio -->
     <div id="portfolio" class="portfolio segments">
         <div class="container">
@@ -325,279 +370,146 @@
                         </li>
                     </ul>
                 </div>
-                
-
-                <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="2, 1">
-                    <div class="content-image">
-                      <a href="images/portfolio3.jpg" class="portfolio-popup">
-                        <img src="images/a3.jpeg" alt="">
-                        <div class="image-overlay"></div>
-                        <div class="portfolio-caption">
-                          <div class="title">
-                            <h4>new!</h4>
-                          </div>
-                          <div class="subtitle">
-                            <span>verified</span>
-                          </div>
-                          <div class="container-details">
-                            <div class="description">Dump card: USA</div>
-                            <div class="price">Balance: $99.99</div>
-                            <div class="amount">Price: $10</div>
-                          </div>
-                          <div class="buy-button">
-                            <a class="donate-with-crypto"
-                              href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e">
-                                 pay with crypto
-                            </a>
-                            <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-                            </script>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 style="align-items: center;">Cards</h2>
                         </div>
-                        </div>
-                      </a>
                     </div>
-                  </div>
-                  
-                  
-                    <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="1">
-                        <div class="content-image">
-                            <a href="images/portfolio2.jpg" class="portfolio-popup">
-                                <img src="images/us12.png" alt="">
-                                <div class="image-overlay"></div>
-                                <div class="portfolio-caption">
-                                    <div class="title">
-                                        <h4>new!</h4>
-                                    </div>
-                                    <div class="subtitle">
-                                        <span>verified</span>
-                                    </div>
-                                    <div class="container-details">
-                                        <div class="description">Dump card: USA</div>
-                                        <div class="price">Balance: $99.99</div>
-                                        <div class="amount">Price: $10</div>
-                                    </div>
-                                    <div class="buy-button">
-                                        <a class="donate-with-crypto"
-                                          href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e">
-                                             pay with crypto
-                                        </a>
-                                        <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-                                        </script>
-                                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/a2.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">USA</h5>
+                                    <p class="card-text">PIN included.</p>
+                                    <p class="card-text">BALANCE: 1000$.</p>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="2, 1">
-                        <div class="content-image">
-                            <a href="images/portfolio3.jpg" class="portfolio-popup">
-                                <img src="images/us11.jpg" alt="">
-                                <div class="image-overlay"></div>
-                                <div class="portfolio-caption">
-                                    <div class="title">
-                                        <h4>new!</h4>
-                                    </div>
-                                    <div class="subtitle">
-                                        <span>verified</span>
-                                    </div>
-                                    <div class="container-details">
-                                        <div class="description">Dump card: USA</div>
-                                        <div class="price">Balance: $99.99</div>
-                                        <div class="amount">Price: $10</div>
-                                    </div>
-                                    <div class="buy-button">
-                                        <a class="donate-with-crypto"
-                                          href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e">
-                                             pay with crypto
-                                        </a>
-                                        <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-                                        </script>
-                                    </div>
+                                <div class="mb-5 d-flex justify-content-around">
+                                    <h3 style=" text-align: left;">price:  500$</h3>
+                                    <button a href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e"  class="btn btn-primary">Buy Now</button>
                                 </div>
-                            </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="3">
-                        <div class="content-image">
-                            <a href="images/portfolio4.jpg" class="portfolio-popup">
-                                <img src="images/a1070.jpeg" alt="">
-                                <div class="image-overlay"></div>
-                                <div class="portfolio-caption">
-                                    <div class="title">
-                                        <h4>new!</h4>
-                                    </div>
-                                    <div class="subtitle">
-                                        <span>verified</span>
-                                    </div>
-                                    <div class="container-details">
-                                        <div class="description">Dump card: USA</div>
-                                        <div class="price">Balance: $99.99</div>
-                                        <div class="amount">Price: $10</div>
-                                    </div>
-                                    <div class="buy-button">
-                                        <a class="donate-with-crypto"
-                                          href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e">
-                                             pay with crypto
-                                        </a>
-                                        <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-                                        </script>
-                                    </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/a1.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">CANADA</h5>
+                                    <p class="card-text">PIN included.</p>
+                                    <p class="card-text">BALANCE: 900$.</p>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="1, 2">
-                        <div class="content-image">
-                            <a href="images/portfolio5.jpg" class="portfolio-popup">
-                                <img src="images/us6.jpg" alt="">
-                                <div class="image-overlay"></div>
-                                <div class="portfolio-caption">
-                                    <div class="title">
-                                        <h4>new!</h4>
-                                    </div>
-                                    <div class="subtitle">
-                                        <span>verified</span>
-                                    </div>
-                                    <div class="container-details">
-                                        <div class="description">Dump card: USA</div>
-                                        <div class="price">Balance: $99.99</div>
-                                        <div class="amount">Price: $10</div>
-                                    </div>
-                                    <div class="buy-button">
-                                        <a class="donate-with-crypto"
-                                          href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e">
-                                             pay with crypto
-                                        </a>
-                                        <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-                                        </script>
-                                    </div>>
+                                <div class="mb-5 d-flex justify-content-around">
+                                    <h3 style=" text-align: left;">price:  400$</h3>
+                                    <button a href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e" class="btn btn-primary">Buy Now</button>
                                 </div>
-                            </a>
+                            </div>
                         </div>
-                    </div>
-                   
-                    <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="3">
-                        <div class="content-image">
-                            <a href="images/portfolio1.jpg" class="portfolio-popup">
-                                <img src="images/a3.jpeg" alt="">
-                                <div class="image-overlay"></div>
-                                <div class="portfolio-caption">
-                                    <div class="title">
-                                        <h4>new!</h4>
-                                    </div>
-                                    <div class="subtitle">
-                                        <span>verified</span>
-                                    </div>
-                                    <div class="container-details">
-                                        <div class="description">Dump card: USA</div>
-                                        <div class="price">Balance: $99.99</div>
-                                        <div class="amount">Price: $10</div>
-                                    </div>
-                                    <div class="buy-button">
-                                        <a class="donate-with-crypto"
-                                          href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e">
-                                             pay with crypto
-                                        </a>
-                                        <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-                                        </script>
-                                    </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/a1070.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">USA</h5>
+                                    <p class="card-text">PIN included.</p>
+                                    <p class="card-text">BALANCE: 880$.</p>
                                 </div>
-                            </a>
-                        </div>
-                         
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="1">
-                        <div class="content-image">
-                            <a href="images/portfolio2.jpg" class="portfolio-popup">
-                                <img src="images/a4.jpeg" alt="">
-                                <div class="image-overlay"></div>
-                                <div class="portfolio-caption">
-                                    <div class="title">
-                                        <h4>new!</h4>
-                                    </div>
-                                    <div class="subtitle">
-                                        <span>verified</span>
-                                    </div>
-                                    <div class="container-details">
-                                        <div class="description">Dump card: USA</div>
-                                        <div class="price">Balance: $99.99</div>
-                                        <div class="amount">Price: $10</div>
-                                    </div>
-                                    <div class="buy-button">
-                                        <a class="donate-with-crypto"
-                                          href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e">
-                                             pay with crypto
-                                        </a>
-                                        <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-                                        </script>
-                                    </div>
+                                <div class="mb-5 d-flex justify-content-around">
+                                    <h3 style=" text-align: left;">price:  300$</h3>
+                                    <button a href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e" class="btn btn-primary">Buy Now</button>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="2, 1">
-                        <div class="content-image">
-                            <a href="images/portfolio3.jpg" class="portfolio-popup">
-                                <img src="images/a3.jpeg" alt="">
-                                <div class="image-overlay"></div>
-                                <div class="portfolio-caption">
-                                    <div class="title">
-                                        <h4>new!</h4>
-                                    </div>
-                                    <div class="subtitle">
-                                        <span>verified</span>
-                                    </div>
-                                    <div class="container-details">
-                                        <div class="description">Dump card: USA</div>
-                                        <div class="price">Balance: $99.99</div>
-                                        <div class="amount">Price: $10</div>
-                                    </div>
-                                    <div class="buy-button">
-                                        <a class="donate-with-crypto"
-                                          href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e">
-                                             pay with crypto
-                                        </a>
-                                        <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-                                        </script>
-                                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/a1072.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">AUSTRALIA</h5>
+                                    <p class="card-text">PIN included.</p>
+                                    <p class="card-text">BALANCE: 600$.</p>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="3">
-                        <div class="content-image">
-                            <a href="images/portfolio4.jpg" class="portfolio-popup">
-                                <img src="images/a1070.jpeg" alt="">
-                                <div class="image-overlay"></div>
-                                <div class="portfolio-caption">
-                                    <div class="title">
-                                        <h4>new!</h4>
-                                    </div>
-                                    <div class="subtitle">
-                                        <span>verified</span>
-                                    </div>
-                                    <div class="container-details">
-                                        <div class="description">Dump card: USA</div>
-                                        <div class="price">Balance: $99.99</div>
-                                        <div class="amount">Price: $10</div>
-                                    </div>
-                                    <div class="buy-button">
-                                        <a class="donate-with-crypto"
-                                          href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e">
-                                             pay with crypto
-                                        </a>
-                                        <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
-                                        </script>
-                                    </div>
+                                <div class="mb-5 d-flex justify-content-around">
+                                    <h3 style=" text-align: left;">price:  200$</h3>
+                                    <button a href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e" class="btn btn-primary">Buy Now</button>
                                 </div>
-                            </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/a400.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">USA</h5>
+                                    <p class="card-text">PIN included.</p>
+                                    <p class="card-text">BALANCE: 500$.</p>
+                                </div>
+                                <div class="mb-5 d-flex justify-content-around">
+                                    <h3 style=" text-align: left;">price:  150$</h3>
+                                    <button a href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e" class="btn btn-primary">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/a4002.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">USA</h5>
+                                    <p class="card-text">PIN included.</p>
+                                    <p class="card-text">BALANCE: 400$.</p>
+                                </div>
+                                <div class="mb-5 d-flex justify-content-around">
+                                    <h3 style=" text-align: left;">price:  100$</h3>
+                                    <button a href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e"  class="btn btn-primary">Buy Now</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-          
-
-                
-                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/a4.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">USA</h5>
+                                    <p class="card-text">PIN included.</p>
+                                    <p class="card-text">BALANCE: 300$.</p>
+                                </div>
+                                <div class="mb-5 d-flex justify-content-around">
+                                    <h3 style=" text-align: left;">price:  80$</h3>
+                                    <button a href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e" class="btn btn-primary">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/a480.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">USA</h5>
+                                    <p class="card-text">PIN included.</p>
+                                    <p class="card-text">BALANCE: 250$.</p>
+                                </div>
+                                <div class="mb-5 d-flex justify-content-around">
+                                    <h3 style=" text-align: left;">price:  50$</h3>
+                                    <button a href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e" class="btn btn-primary">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./images/a800.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">USA</h5>
+                                    <p class="card-text">PIN included.</p>
+                                    <p class="card-text">BALANCE: 100$.</p>
+                                </div>
+                                <div class="mb-5 d-flex justify-content-around">
+                                    <h3 style=" text-align: left;">price:  20$</h3>
+                                    <button a href="https://commerce.coinbase.com/checkout/98dcae28-2393-485e-8d71-57cbf0261f0e" class="btn btn-primary">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -726,7 +638,12 @@
         </div>
     </div>
     <!-- end footer -->
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807">
+    </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/fakeLoader.min.js"></script>
