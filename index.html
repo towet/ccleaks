@@ -34,36 +34,52 @@
     <div class="fakeLoader"></div>
     <!-- loader -->
     <style>
+        @media (max-width: 768px) {
+  .dropdown-content {
+    display: none;
+  }
+  .nav-item:hover .dropdown-content {
+    display: none;
+  }
+}
         /* Styling for the custom dropdown */
-        .custom-dropdown {
-          position: relative;
-          display: inline-block;
-        }
-      
-        .custom-dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: #f9f9f9;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 1;
-        }
-      
-        .custom-dropdown-content a {
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-        }
-      
-        .custom-dropdown-content a:hover {
-          background-color: #f1f1f1;
-        }
-      
-        .custom-dropdown:hover .custom-dropdown-content {
-          display: block;
-        }
+        .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.nav-item:hover .dropdown-content {
+  display: block;
+}
       </style>
+      <script>
+        // Get all dropdowns
+const dropdowns = document.querySelectorAll('.dropdown-content');
+
+// Add event listener to dropdown buttons
+dropdowns.forEach((dropdown) => {
+  dropdown.addEventListener('click', function(event) {
+    // Toggle dropdown visibility
+    event.stopPropagation();
+    dropdown.classList.toggle('show');
+  });
+});
+      </script>
       
     <!-- header -->
     <header id="home">
@@ -97,15 +113,13 @@
                             <a href="#portfolio" class="nav-link">Cards</a>
                         </li>
                         <li class="nav-item">
-                            <div class="custom-dropdown">
-                              <a class="nav-link">BANK LOGS</a>
-                              <div class="custom-dropdown-content">
-                                <a href="chasebank.html" >Chase Bank</a>
-                                <a href="cashapp.html" >Cash App Bank</a>
-                                <a href="paypalbank.html" >PayPal Bank</a>
-                                <a href="pncbank.html" >PNC Bank</a>
-                                <a href="scotiabank.html" >Scotia Bank</a>
-                              </div>
+                            <a class="nav-link" href="#">BANK LOGS</a>
+                            <div class="dropdown-content">
+                              <a href="chasebank.html">Chase Bank</a>
+                              <a href="cashapp.html">Cash App Bank</a>
+                              <a href="paypalbank.html">PayPal Bank</a>
+                              <a href="pncbank.html">PNC Bank</a>
+                              <a href="scotiabank.html">Scotia Bank</a>
                             </div>
                           </li>
                         <li class="nav-item">
