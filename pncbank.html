@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bank logs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #DA4453;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0e0d0d, #050c00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1b191b, #3b3a3a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.back-btn {
+  background-color: #f1b81b;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #1c79c0;
+}
+.back-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #080808;
+  border-radius: 8px;
+  color: #eaebe3;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Added media query for small devices */
+@media (max-width: 768px) {
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .column {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Adjust spacing between elements in each column */
+  .column div {
+    margin-bottom: 5px;
+  }
+}
+
+.column {
+  flex: 1;
+  text-align: center;
+}
+
+.check-btn {
+  background-color: #337ab7; /* Button color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.check-btn:hover {
+  background-color: #135493; /* Button color on hover */
+}
+
+.card {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.status {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { color: #ff0000; }
+    50% { color: #00ff00; }
+    100% { color: #ff0000; }
+}
+
+.buy-btn {
+  background-color: #33cc33; /* Button color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.buy-btn:hover {
+  background-color: #229c22; /* Button color on hover */
+}
+
+</style>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <div>ID</div>
+      </div>
+      <div class="column">
+        <div>Type</div>
+      </div>
+      <div class="column">
+        <div>Check Info</div>
+      </div>
+      <div class="column">
+        <div>Balance</div>
+      </div>
+      <div class="column">
+        <div>Status</div>
+      </div>
+      <div class="column">
+        <div>Action</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div>1</div>
+      </div>
+      <div class="column">
+        <div>checkings/savings</div>
+      </div>
+      <div class="column">
+        <div>
+          <button class="check-btn" onclick="showCard(50, 100)">Check</button>
+        </div>
+      </div>
+      <div class="column">
+        <div>500</div>
+      </div>
+      <div class="column">
+        <div class="status">Available</div>
+      </div>
+      <div class="column">
+        <div>
+          <button class="buy-btn">Buy</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="column">
+          <div>1</div>
+        </div>
+        <div class="column">
+          <div>checkings/savings</div>
+        </div>
+        <div class="column">
+          <div>
+            <button class="check-btn" onclick="showCard(50, 100)">Check</button>
+          </div>
+        </div>
+        <div class="column">
+          <div>500</div>
+        </div>
+        <div class="column">
+          <div class="status">Available</div>
+        </div>
+        <div class="column">
+          <div>
+            <button class="buy-btn">Buy</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div>1</div>
+        </div>
+        <div class="column">
+          <div>checkings/savings</div>
+        </div>
+        <div class="column">
+          <div>
+            <button class="check-btn" onclick="showCard(50, 100)">Check</button>
+          </div>
+        </div>
+        <div class="column">
+          <div>500</div>
+        </div>
+        <div class="column">
+          <div class="status">Available</div>
+        </div>
+        <div class="column">
+          <div>
+            <button class="buy-btn">Buy</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div>1</div>
+        </div>
+        <div class="column">
+          <div>checkings/savings</div>
+        </div>
+        <div class="column">
+          <div>
+            <button class="check-btn" onclick="showCard(50, 100)">Check</button>
+          </div>
+        </div>
+        <div class="column">
+          <div>500</div>
+        </div>
+        <div class="column">
+          <div class="status">Available</div>
+        </div>
+        <div class="column">
+          <div>
+            <button class="buy-btn">Buy</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div>1</div>
+        </div>
+        <div class="column">
+          <div>checkings/savings</div>
+        </div>
+        <div class="column">
+          <div>
+            <button class="check-btn" onclick="showCard(50, 100)">Check</button>
+          </div>
+        </div>
+        <div class="column">
+          <div>500</div>
+        </div>
+        <div class="column">
+          <div class="status">Available</div>
+        </div>
+        <div class="column">
+          <div>
+            <button class="buy-btn">Buy</button>
+          </div>
+        </div>
+      </div><div class="row">
+        <div class="column">
+          <div>1</div>
+        </div>
+        <div class="column">
+          <div>checkings/savings</div>
+        </div>
+        <div class="column">
+          <div>
+            <button class="check-btn" onclick="showCard(50, 100)">Check</button>
+          </div>
+        </div>
+        <div class="column">
+          <div>500</div>
+        </div>
+        <div class="column">
+          <div class="status">Available</div>
+        </div>
+        <div class="column">
+          <div>
+            <button class="buy-btn">Buy</button>
+          </div>
+        </div>
+      </div>
+    <!-- Add more rows here as needed -->
+  </div>
+
+  <div class="card" id="card">
+    <div class="card-content">
+      <span class="close-btn" onclick="closeCard()">x</span>
+      <h2>Item Info</h2>
+      <p>Price: $50</p>
+      <p>Balance: $30</p>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+  <script>
+    function showCard(id) {
+  const card = document.getElementById("card");
+  card.style.display = "block";
+}
+
+function closeCard() {
+  const card = document.getElementById("card");
+  card.style.display = "none";
+}
+
+  </script>
+</body>
+</html>

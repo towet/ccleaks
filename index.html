@@ -33,7 +33,38 @@
     <!-- loader -->
     <div class="fakeLoader"></div>
     <!-- loader -->
-
+    <style>
+        /* Styling for the custom dropdown */
+        .custom-dropdown {
+          position: relative;
+          display: inline-block;
+        }
+      
+        .custom-dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+      
+        .custom-dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+      
+        .custom-dropdown-content a:hover {
+          background-color: #f1f1f1;
+        }
+      
+        .custom-dropdown:hover .custom-dropdown-content {
+          display: block;
+        }
+      </style>
+      
     <!-- header -->
     <header id="home">
 
@@ -65,6 +96,18 @@
                         <li class="nav-item">
                             <a href="#portfolio" class="nav-link">Cards</a>
                         </li>
+                        <li class="nav-item">
+                            <div class="custom-dropdown">
+                              <a class="nav-link">BANK LOGS</a>
+                              <div class="custom-dropdown-content">
+                                <a href="chasebank.html" >Chase Bank</a>
+                                <a href="cashapp.html" >Cash App Bank</a>
+                                <a href="paypalbank.html" >PayPal Bank</a>
+                                <a href="pncbank.html" >PNC Bank</a>
+                                <a href="scotiabank.html" >Scotia Bank</a>
+                              </div>
+                            </div>
+                          </li>
                         <li class="nav-item">
                             <a href="#blog" class="nav-link">Blog</a>
                         </li>
