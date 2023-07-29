@@ -33,53 +33,42 @@
     <!-- loader -->
     <div class="fakeLoader"></div>
     <!-- loader -->
-    <style>
-        @media (max-width: 768px) {
+    
+
+<style>
+  /* Styling for the custom dropdown */
   .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
     display: block;
   }
-  .nav-item:hover .dropdown-content {
-    display: block;
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
   }
-}
-        /* Styling for the custom dropdown */
-        .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+  /* Show the dropdown on small devices when the parent link is focused or hovered */
+  @media (max-width: 768px) {
+    .nav-item.show .dropdown-content {
+      display: block;
+    }
+  }
+</style>
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
+<!-- ... Your HTML code continues ... -->
 
-.nav-item:hover .dropdown-content {
-  display: block;
-}
       </style>
- <script>
-    // Get all dropdowns
-    const dropdowns = document.querySelectorAll('.dropdown-content');
-  
-    // Add event listener to dropdown buttons
-    dropdowns.forEach((dropdown) => {
-      dropdown.addEventListener('click', function(event) {
-        // Toggle dropdown visibility
-        event.stopPropagation();
-        dropdown.classList.toggle('show');
-      });
-    });
-  </script>
+t>
       
     <!-- header -->
     <header id="home">
