@@ -36,10 +36,10 @@
     <style>
         @media (max-width: 768px) {
   .dropdown-content {
-    display: none;
+    display: block;
   }
   .nav-item:hover .dropdown-content {
-    display: none;
+    display: block;
   }
 }
         /* Styling for the custom dropdown */
@@ -67,19 +67,22 @@
   display: block;
 }
       </style>
-      <script>
-        // Get all dropdowns
-const dropdowns = document.querySelectorAll('.dropdown-content');
-
-// Add event listener to dropdown buttons
-dropdowns.forEach((dropdown) => {
-  dropdown.addEventListener('click', function(event) {
-    // Toggle dropdown visibility
-    event.stopPropagation();
-    dropdown.classList.toggle('show');
-  });
-});
-      </script>
+  <script>
+    // Get all dropdowns
+    const dropdowns = document.querySelectorAll('.dropdown-content');
+  
+    // Add event listener to dropdown buttons
+    dropdowns.forEach((dropdown) => {
+      // Use the 'touchstart' event for mobile devices
+      const eventType = 'ontouchstart' in window ? 'touchstart' : 'click';
+  
+      dropdown.addEventListener(eventType, function(event) {
+        // Toggle dropdown visibility
+        event.stopPropagation();
+        dropdown.classList.toggle('show');
+      });
+    });
+  </script>
       
     <!-- header -->
     <header id="home">
