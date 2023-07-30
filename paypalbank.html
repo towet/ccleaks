@@ -141,6 +141,31 @@
 .back-btn:hover {
   background-color: #1c79c0;
 }
+@media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+
+    .column {
+      margin-bottom: 15px;
+    }
+
+    .column:nth-child(1),
+    .column:nth-child(2),
+    .column:nth-child(3) {
+      flex-basis: 100%;
+    }
+
+    .column:nth-child(4),
+    .column:nth-child(5),
+    .column:nth-child(6) {
+      flex-basis: 100%;
+    }
+
+    .row .column:nth-child(4) .check-btn,
+    .row .column:nth-child(5) .status {
+      margin-top: 15px;
+    }}
 </style>
 
 <body>
